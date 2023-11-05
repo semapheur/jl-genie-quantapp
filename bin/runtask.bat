@@ -1,0 +1,1 @@
+"C:\Users\danfy\AppData\Local\Programs\Julia-1.9.3\bin\julia" --color=yes --depwarn=no --project=@. -q -- "%~dp0..\bootstrap.jl" -r %*
