@@ -1,6 +1,7 @@
 Run app
 ```julia
-julia --project -e 'using Pkg; Pkg.activate(\".\"); Pkg.instantiate(); Pkg.precompile()'
+julia --project # -e 'using Pkg; Pkg.activate(\".\"); Pkg.instantiate(); Pkg.precompile()'
+using GenieFramework, Genie.loadapp(), up()
 ```
 
 Activate the evironment (in package mode)
