@@ -1,0 +1,1 @@
+page(model, partial=true, [@yield])

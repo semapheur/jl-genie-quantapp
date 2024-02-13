@@ -1,0 +1,33 @@
+Run app
+```julia
+julia --project -e 'using Pkg; Pkg.activate(\".\"); Pkg.instantiate(); Pkg.precompile()'
+```
+
+Activate the evironment (in package mode)
+```julia
+activate .
+instantiate
+```
+
+Create resource
+```julia
+using Genie
+Genie.Generator.newresource("resource_name")
+
+using SearchLight
+SearchLight.Generator.newresource("resource_name")
+```
+
+Migrates table
+```julia
+#]pkg activate .
+#]pkg instantiate
+
+using SearchLight
+using SearchLightSQLite
+
+SearchLight.Configuration.load() |> SearchLight.connect
+SearchLight.Migration.init()
+SearchLight.Migration.status()
+SearchLight.Migration.last_up()
+```
