@@ -1,0 +1,19 @@
+html,
+body > div.container:first-child,
+body > div.container:first-child > div.row,
+#Main_App_Index_varMain_App_Index_ReactiveModel {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+div.js-plotly-plot {
+  position: static !important;
+}
