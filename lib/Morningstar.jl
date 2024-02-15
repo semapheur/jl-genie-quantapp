@@ -1,7 +1,7 @@
 module Morningstar
 
 using Dates
-using DataFrames, HTTP, JSON3, NamedTupleTools, StructTypes
+using DataFrames, HTTP, JSON, JSON3, NamedTupleTools, StructTypes
 
 import Base: @kwdef
 
@@ -60,14 +60,14 @@ headers = Dict(
   #"Cache-Control" => "max-age=0",
 )
 
-function ohlcv(id::String, currency::String, start_date::Date)
+function ohlcv(id::String, currency::String, start_date::Date=Date(1970, 1, 1))
   params = (
     id="$(id)]3]0]",
     currencyId=currency,
     idtype="Morningstar",
     frequency="daily",
     startDate=Dates.format(start_date, "yyyy-mm-dd"),
-    #end_date = Dates.format(end_date, "yyyy-mm-dd"),
+    #endDate = Dates.format(end_date, "yyyy-mm-dd"),
     outputType="COMPACTJSON",
     applyTrackRecordExtension="true",
   )

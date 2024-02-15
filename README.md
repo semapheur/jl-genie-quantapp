@@ -32,3 +32,11 @@ SearchLight.Migration.init()
 SearchLight.Migration.status()
 SearchLight.Migration.last_up()
 ```
+
+Parse Vue to Julia
+```julia
+using StippleUI.StippleUIParser
+
+parse_vue_html(html_string, indent=2) |> println
+
+```
